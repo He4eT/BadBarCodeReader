@@ -1,0 +1,38 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: #212121;
+}
+
+.wrapper {
+	max-width: 600px;
+	margin: 0 auto;
+	/*padding: 1rem;*/
+}
+
+.viewport {
+  position: relative;
+  box-shadow: 0px 3rem 6rem -3rem rgba(252, 49, 0, 1);
+  border-bottom: 2px solid #ff8a37;
+  font-size: 0;
+}
+
+.viewport > canvas, #interactive.viewport > video {
+  max-width: 100%;
+  width: 100%;
+}
+
+.viewport canvas.drawing,
+.viewport canvas.drawingBuffer {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.log {
+	padding: 2rem;
+	line-height: 2rem;
+	font-size: 1.5rem;
+	font-family: monospace;
+	color: #fc3100;
+}
