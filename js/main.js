@@ -103,5 +103,5 @@ function isPrimeNumber (code) {
 var Store = {}
 
 App.init(params)
-Quagga.onProcessed(App.onProcessed)
-Quagga.onDetected(App.onDetected)
+Quagga.onProcessed(App.onProcessed.bind(App))
+Quagga.onDetected(App.onDetected.bind(App))
