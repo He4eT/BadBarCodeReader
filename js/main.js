@@ -2,7 +2,7 @@ var params = {
   inputStream: {
   type : 'LiveStream',
   constraints: {
-      facingMode: 'user', // or user
+      // facingMode: 'environment', // or user
       // width: {min: 640},
       // height: {min: 480},
       // aspectRatio: {min: 1, max: 100},
