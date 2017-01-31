@@ -25,6 +25,10 @@ a {
 	color: inherit;
 }
 
+img[src="#"] {
+    display: none;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -32,7 +36,15 @@ html, body {
 	font-size: 1.2rem;
 	color: orange;
 	font-family: monospace;
+}
+
+.noscroll {
 	overflow: hidden;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
 }
 
 body {
@@ -149,4 +161,32 @@ input {
 	display: block;
 	padding: 20px;
 	text-decoration: none;
+}
+
+.webcam {
+	font-size: 0;
+	border: 2px solid #ff3000;
+}
+
+.regform {
+	margin-left: 50px;
+	position: relative;
+}
+
+.regForm input {
+	display: block;
+	margin-bottom: 30px;
+}
+
+.regForm .finalSubmit {
+	display: none;
+}
+
+.capture,
+.finalSubmit {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin-bottom: 0 !important;
+	width: 250px;
 }
