@@ -1,38 +1,134 @@
+@keyframes load {
+  0% { opacity: 0; }
+  30% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes flash {
+  0% { opacity: 0; height: auto;}
+  40% { opacity: 1; height: auto;}
+  60% { opacity: 1; height: auto;}
+  100% { opacity: 0; height: auto;}
+}
+
+@keyframes afterFlash {
+  0% { opacity: 0; height: 0;}
+  70% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+* {
+	outline: none;
+}
+
+a {
+	color: inherit;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
+	min-height: 100vh;
+	font-size: 1.2rem;
+	color: orange;
+	font-family: monospace;
+}
+
+body {
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content:center;
 	background-color: #212121;
 }
 
-.wrapper {
-	max-width: 600px;
-	margin: 0 auto;
-	/*padding: 1rem;*/
+.fastLoad {
+	animation: load 0.3s ease-in;
 }
 
-.viewport {
-  position: relative;
-  box-shadow: 0px 3rem 6rem -3rem rgba(252, 49, 0, 1);
-  border-bottom: 2px solid #ff8a37;
-  font-size: 0;
+.flash {
+	height: 0;
+	overflow: hidden;
+	animation: flash .5s ease-out;
 }
 
-.viewport > canvas, #interactive.viewport > video {
-  max-width: 100%;
-  width: 100%;
+.afterFlash {
+	animation: afterFlash 1s linear;
 }
 
-.viewport canvas.drawing,
-.viewport canvas.drawingBuffer {
-  position: absolute;
-  left: 0;
-  top: 0;
+.wrap {
+	padding: 50px;
+	background-color: #424242;
+	box-shadow: 0 0 20px 5px #ff3000;
+	border: 2px solid #ffa52e;
 }
 
-.log {
-	padding: 2rem;
-	line-height: 2rem;
-	font-size: 1.5rem;
-	font-family: monospace;
-	color: #fc3100;
+.popup .info {
+	display: block;
+	text-align: center;
+	font-size: 3rem;
+	/*line-height: 3rem;*/
 }
+
+.msg	{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+input {
+	padding: 20px;
+	background-color: inherit;
+	border: 2px solid #ff3000;
+	font-size: 1.5rem; 
+	color: orange;
+}
+
+.scanForm,
+.scanForm input {
+	text-align: center;
+}
+
+.shortList {
+	margin-top: 50px;
+}
+
+.shortList_item {
+	margin-top: 30px;
+}
+
+.shortList img,
+.shortList .info {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.shortList img {
+	width: 200px;
+	/*min-height: 120px;*/
+	margin-right: 20px;
+	border: 2px solid #ffa500;
+}
+
+.shortList .info {
+	line-height: 2.5rem;
+}
+
+.info_name {}
+
+.info_number,
+.info_code {
+	color: #ff3000;
+}
+.info_number:before{
+	color: #ffa500;
+	content: "[";
+}
+.info_number:after {
+	color: #ffa500;
+	content: "]";
+}
+.info_code:before {
+	content: "#";
+	color: #ffa500;
+}
+
