@@ -32,6 +32,7 @@ html, body {
 	font-size: 1.2rem;
 	color: orange;
 	font-family: monospace;
+	overflow: hidden;
 }
 
 body {
@@ -132,3 +133,20 @@ input {
 	color: #ffa500;
 }
 
+.menu {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+	opacity: 0;
+}
+
+.menu:hover {
+	opacity: 1;
+}
+
+.menu a {
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+}
