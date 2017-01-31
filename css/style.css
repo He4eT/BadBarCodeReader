@@ -189,4 +189,11 @@ input {
 	right: 0;
 	margin-bottom: 0 !important;
 	width: 250px;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in;
+}
+
+.capture:hover,
+.finalSubmit:hover {
+	background-color: #616161;
 }
